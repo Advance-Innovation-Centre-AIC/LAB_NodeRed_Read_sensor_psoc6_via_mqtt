@@ -11,7 +11,7 @@
         "id": "ecce1062e39d4261",
         "type": "mqtt in",
         "z": "3bac108584c47a12",
-        "name": "",
+        "name": "MQTT Subscriber",
         "topic": "PSoC6Status/temperature,pressure",
         "qos": "1",
         "datatype": "auto-detect",
@@ -20,8 +20,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
-        "y": 360,
+        "x": 180,
+        "y": 580,
         "wires": [
             [
                 "654ee1a613ae82ce"
@@ -41,8 +41,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 830,
-        "y": 280,
+        "x": 950,
+        "y": 340,
         "wires": []
     },
     {
@@ -83,30 +83,13 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 610,
-        "y": 280,
+        "x": 730,
+        "y": 340,
         "wires": [
             [
                 "b84ece86611e84f0"
             ]
         ]
-    },
-    {
-        "id": "c94a4c9ffd3136bd",
-        "type": "debug",
-        "z": "3bac108584c47a12",
-        "name": "debug function",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 670,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "654ee1a613ae82ce",
@@ -119,7 +102,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 350,
+        "x": 370,
         "y": 540,
         "wires": [
             [
@@ -142,8 +125,8 @@
         "correl": "",
         "expiry": "",
         "broker": "8d5cfad5.2fc08",
-        "x": 430,
-        "y": 120,
+        "x": 450,
+        "y": 220,
         "wires": []
     },
     {
@@ -166,8 +149,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 100,
-        "y": 120,
+        "x": 200,
+        "y": 160,
         "wires": [
             [
                 "f21c84afff8e53ad",
@@ -195,8 +178,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 100,
-        "y": 60,
+        "x": 200,
+        "y": 100,
         "wires": [
             [
                 "f21c84afff8e53ad",
@@ -217,8 +200,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
-        "y": 40,
+        "x": 500,
+        "y": 60,
         "wires": []
     },
     {
@@ -234,8 +217,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
-        "y": 200,
+        "x": 500,
+        "y": 120,
         "wires": []
     },
     {
@@ -249,8 +232,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 360,
+        "x": 540,
+        "y": 460,
         "wires": [
             [
                 "9f1220715dcbba64"
@@ -273,7 +256,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 570,
+        "x": 670,
         "y": 540,
         "wires": []
     },
@@ -300,8 +283,28 @@
         "seg1": "600",
         "seg2": "1100",
         "className": "",
-        "x": 600,
-        "y": 360,
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2eef781b5b5273b2",
+        "type": "comment",
+        "z": "3bac108584c47a12",
+        "name": "Read data for Topic2: \"PSoC6Status/temperature,pressure\"",
+        "info": "",
+        "x": 270,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "175fc6bcefc273a9",
+        "type": "comment",
+        "z": "3bac108584c47a12",
+        "name": "Sending data for Topic: \"PSoC6Status/led\"",
+        "info": "",
+        "x": 200,
+        "y": 40,
         "wires": []
     },
     {
