@@ -91,11 +91,12 @@ port 8884 : MQTT, encrypted, client certificate required
 
 
 
-3. ดูตัวอย่างวิธีการสร้างไฟล์ client.crt, client.key, mosquitto.org.crt และ ตั้งค่าใน “**configs/mqtt_client_config.h**” ได้จาก → หัวข้อ MQTT client 
+3. ดูตัวอย่างวิธีการสร้างไฟล์ client.crt, client.key, mosquitto.org.crt และ ตั้งค่าใน “**configs/mqtt_client_config.h**” ได้จาก →หัวข้อ [MQTT via Mosquitto broker]()
 4. เปิด file source/publisher_task.c เก็บ copy จาก [link] ไปว่างแทน
 5. เปิดไฟล์ configs/wifi_config.h แก้ไข ข้อมูล ชื่อ WiFi และ Password ที่ต้องการเชื่อมต่อ
 6. Build และ upload โปรแกรมลงบอร์ด 
 7. เปิดโปรแกรม Node-red ทำการ import code โปรแกรมและ ตรวจสอบการ ตั้งค่า node-red ตามตัวอย่าง [Setting Node-red](https://www.dropbox.com/scl/fi/8q7ld86c6wn4q79c7h1kr/LAB_-NodeRed_Read_sensor_psoc6_via_mqtt.paper?dl=0&rlkey=nwjwxnbk5wqrvkh2t1c75v2w3#:uid=879208286062881172009041&h2=Setting-Node-red)
+
 8.  run โปรแกรม Node-red และเปิดเบราว์เซอร์ url: http://127.0.0.1:1880/ui
 
 Figure: Output
@@ -109,19 +110,22 @@ Figure: Output
 
 1. เริ่มใช้งาน  node-red → [ติดตั้ง Node-red บน Windows](https://github.com/Advance-Innovation-Centre-AIC/EE_Curriculum/blob/main/term2_65_EMB62_IoT/LAB01/Get_started_Node-red.md#%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-node-red-%E0%B8%9A%E0%B8%99-windows)
 2. import code Button control LED PSoC6
-    1. คลิ๊กที่ ไฟล์ source >>\[Button control LED PSoC6.json\]( )
-    2. copy code ไปที่ แถบขวามือ>>คลิ๊กที่แถบ ขีดสามขีด>> เลือก import
+a. คลิ๊กที่ ไฟล์ source >>\[Button control LED PSoC6.json\]( )
+
+b.copy code ไปที่ แถบขวามือ>>คลิ๊กที่แถบ ขีดสามขีด>> เลือก import
+
+
 ![fig: import function](https://camo.githubusercontent.com/5a37c5f182695a69f125fdd207bf995385cf5c8d6ab5ed87048e6928f4595c9e/68747470733a2f2f70617065722d6174746163686d656e74732e64726f70626f7875736572636f6e74656e742e636f6d2f735f453532434539363336434332314535344342373834434341384132374342353633354439364536373037383033364238413842393236444142443634383644365f313637363139383932383536355f556e7469746c65642e706e67)
 
 
 
-    c. วาง code ลงหน้า cilpboard >> เลือก new flow >> คลิ๊ก import
+c. วาง code ลงหน้า cilpboard >> เลือก new flow >> คลิ๊ก import
     
 ![](https://camo.githubusercontent.com/a8fbe0623c069fe495f9b36538e32d60a5f637ba013be3131af2ea78ab35c78f/68747470733a2f2f70617065722d6174746163686d656e74732e64726f70626f7875736572636f6e74656e742e636f6d2f735f453532434539363336434332314535344342373834434341384132374342353633354439364536373037383033364238413842393236444142443634383644365f313637363139393230363238375f556e7469746c65642e706e67)
 
 
 
-    d. สังเกตที่แถบ flow จะมี flow ชื่อว่า “NodeRed_Read_sensor_psoc6_via_mqtt” ปรากฎ
+d. สังเกตที่แถบ flow จะมี flow ชื่อว่า “NodeRed_Read_sensor_psoc6_via_mqtt” ปรากฎ
 
 Figure: flow node-red
 
@@ -129,15 +133,17 @@ Figure: flow node-red
 
 
 *หมายเหตุ:* สำหรับหรับ node-red ที่ติดตั้งใหม่ ให้ติดตั้ง module dashboard เพิ่ม 
+- ไปที่ Manage palette >>Install>> search modules >> พิมพ์ “Dashboard >> เลือก node-red-dashboard >> install
+- ดูตัวอย่างการใช้งาน dashboard เบื้องต้นได้จาก [LAB: Basic Node-red Dashboard](https://github.com/Advance-Innovation-Centre-AIC/EE_Curriculum/tree/main/term2_65_EMB64_Applied_ES/LAB11#lab11-basic-node-red-dashboard)
 
-    - ไปที่ Manage palette >>Install>> search modules >> พิมพ์ “Dashboard >> เลือก node-red-dashboard >> install
-    - ดูตัวอย่างการใช้งาน dashboard เบื้องต้นได้จาก [LAB: Basic Node-red Dashboard](https://github.com/Advance-Innovation-Centre-AIC/EE_Curriculum/tree/main/term2_65_EMB64_Applied_ES/LAB11#lab11-basic-node-red-dashboard)
 
 
 3. ตรวจสอบการตั้งค่า ใช้ node-red เป็น Subscriber โดยดับเบิ้ลคลิ๊กที่ mqtt in node หรือ MQTT Subscriber ที่โปรแกรม node-red และ แก้ไขการตั้งค่าข้อมูลช่องให้ตรงตามข้อมูลด้านล่าง ดังนี้
-    1. Server >> แก้ไขเป็น “IP address ของ Broker” port: “8884”
-    2. Topic >> ตั้งค่าเป็น PSoC6Status/temperature,pressure
-    3. QoS >> ตั้งค่าเป็น “1”
+a. Server >> แก้ไขเป็น “IP address ของ Broker” port: “8884”
+
+b. Topic >> ตั้งค่าเป็น PSoC6Status/temperature,pressure
+
+c. QoS >> ตั้งค่าเป็น “1”
 
 
 ![](https://paper-attachments.dropboxusercontent.com/s_6B5130AC4896E700626DB737BBCA734D4979424F756C1CF38B36AD08FC90FD50_1683184827889_image.png)
@@ -147,11 +153,11 @@ Figure: flow node-red
 ![](https://paper-attachments.dropboxusercontent.com/s_6B5130AC4896E700626DB737BBCA734D4979424F756C1CF38B36AD08FC90FD50_1683184240117_Screenshot+2023-05-04+134305.png)
 
 
- d. ทำการตั้งค่าความปลอดภัยโดย คลิ๊กที่ ลูกศร
-
-    - ไปที่ sever >> Use TLS >> คลิ๊กที่ ลูกศร 
+d. ทำการตั้งค่าความปลอดภัยโดย คลิ๊กที่ ลูกศร
+- ไปที่ sever >> Use TLS >> คลิ๊กที่ ลูกศร 
 
 e. คลิ๊ก upload ไฟล์ จากไฟล์โปรเจคของบอร์ด ทั้ง 3 ไฟล์ ให้กับ node-red 
+
 
 Figure: set Server use TLS of  node-red 
 
@@ -159,13 +165,15 @@ Figure: set Server use TLS of  node-red
 ![](https://paper-attachments.dropboxusercontent.com/s_6B5130AC4896E700626DB737BBCA734D4979424F756C1CF38B36AD08FC90FD50_1683184551325_Screenshot+2023-05-04+134404.png)
 
 
- f. หลังจากตั้งค่าเสร็จกด update 
+f. หลังจากตั้งค่าเสร็จกด update 
 
 
 4. ตรวจสอบการตั้งค่า ใช้ node-red เป็น Publisher โดยดับเบิ้ลคลิ๊กที่ mqtt out node หรือ PSoC6Status/led ที่โปรแกรม node-red และ แก้ไขการตั้งค่าข้อมูลช่องให้ตรงตามข้อมูลด้านล่าง ดังนี้
-    1. Server >> แก้ไขเป็น “IP address ของ Broker” port: “8884”
-    2. Topic >> ตั้งค่าเป็น PSoC6Status/led
-    3. QoS >> ตั้งค่าเป็น “1”
+a. Server >> แก้ไขเป็น “IP address ของ Broker” port: “8884”
+
+b. Topic >> ตั้งค่าเป็น PSoC6Status/led
+
+c. QoS >> ตั้งค่าเป็น “1”
 
 
 ![](https://paper-attachments.dropboxusercontent.com/s_6B5130AC4896E700626DB737BBCA734D4979424F756C1CF38B36AD08FC90FD50_1683184765457_image.png)
@@ -175,15 +183,15 @@ Figure: set Server use TLS of  node-red
 
 
 
-
 5. คลิ๊ก Deploy เพื่อให้ Node-red ทำงานตามโปรแกรมที่ได้ตั้งค่าไว้
 6. เปิดหน้าเบราว์เซอร์ขึ้นมา ใส่ “your ip address:1883/ui” จะปรากฎหน้า dashboard ของ node-red
 
 ตัวอย่าง
 
-    ````
-      http://127.0.0.1:1880/ui
-    ````
+````
+    http://127.0.0.1:1880/
+   
+````
 
 
 
