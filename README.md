@@ -91,7 +91,8 @@ port 8884 : MQTT, encrypted, client certificate required
 
 
 
-3. ดูตัวอย่างวิธีการสร้างไฟล์ client.crt, client.key, mosquitto.org.crt และ ตั้งค่าใน “**configs/mqtt_client_config.h**” ได้จาก →หัวข้อ slide page 19 [MQTT via Mosquitto broker](https://github.com/Advance-Innovation-Centre-AIC/LAB_NodeRed_Read_sensor_psoc6_via_mqtt/blob/e38f6650f649b7e0c999de9d02b34da31a4ec703/docs/HOT_PSoC6_WIFI%20v3.pdf)
+3. ดูตัวอย่างวิธีการสร้างไฟล์ client.crt, client.key, mosquitto.org.crt และ ตั้งค่าใน “**configs/mqtt_client_config.h**” 
+- ได้จาก →หัวข้อ slide page 19 [MQTT via Mosquitto broker](https://github.com/Advance-Innovation-Centre-AIC/LAB_NodeRed_Read_sensor_psoc6_via_mqtt/blob/e38f6650f649b7e0c999de9d02b34da31a4ec703/docs/HOT_PSoC6_WIFI%20v3.pdf)
 
 4. เปิด file source/publisher_task.c เก็บ copy จาก [link] ไปว่างแทน
 5. เปิดไฟล์ configs/wifi_config.h แก้ไข ข้อมูล ชื่อ WiFi และ Password ที่ต้องการเชื่อมต่อ
@@ -111,7 +112,7 @@ Figure: Output
 
 1. เริ่มใช้งาน  node-red → [ติดตั้ง Node-red บน Windows](https://github.com/Advance-Innovation-Centre-AIC/EE_Curriculum/blob/main/term2_65_EMB62_IoT/LAB01/Get_started_Node-red.md#%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-node-red-%E0%B8%9A%E0%B8%99-windows)
 2. import code Button control LED PSoC6
-a. คลิ๊กที่ ไฟล์ source >>\[Button control LED PSoC6.json\](https://github.com/Advance-Innovation-Centre-AIC/LAB_NodeRed_Read_sensor_psoc6_via_mqtt/blob/367eff3d4db6d1fa1ef356fc44aca44c0235c3a7/flow/NodeRed_Read_sensor_psoc6_via_mqtt.json)
+a. คลิ๊กที่ ไฟล์ source >> [Button control LED PSoC6](https://github.com/Advance-Innovation-Centre-AIC/LAB_NodeRed_Read_sensor_psoc6_via_mqtt/blob/367eff3d4db6d1fa1ef356fc44aca44c0235c3a7/flow/NodeRed_Read_sensor_psoc6_via_mqtt.json)
 
 b.copy code ไปที่ แถบขวามือ>>คลิ๊กที่แถบ ขีดสามขีด>> เลือก import
 
