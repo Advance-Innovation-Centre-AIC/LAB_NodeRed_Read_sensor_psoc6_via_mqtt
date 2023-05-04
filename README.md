@@ -91,7 +91,8 @@ port 8884 : MQTT, encrypted, client certificate required
 
 
 
-3. ดูตัวอย่างวิธีการสร้างไฟล์ client.crt, client.key, mosquitto.org.crt และ ตั้งค่าใน “**configs/mqtt_client_config.h**” ได้จาก →หัวข้อ [MQTT via Mosquitto broker]()
+3. ดูตัวอย่างวิธีการสร้างไฟล์ client.crt, client.key, mosquitto.org.crt และ ตั้งค่าใน “**configs/mqtt_client_config.h**” ได้จาก →หัวข้อ slide page 19 [MQTT via Mosquitto broker](https://github.com/Advance-Innovation-Centre-AIC/LAB_NodeRed_Read_sensor_psoc6_via_mqtt/blob/e38f6650f649b7e0c999de9d02b34da31a4ec703/docs/HOT_PSoC6_WIFI%20v3.pdf)
+
 4. เปิด file source/publisher_task.c เก็บ copy จาก [link] ไปว่างแทน
 5. เปิดไฟล์ configs/wifi_config.h แก้ไข ข้อมูล ชื่อ WiFi และ Password ที่ต้องการเชื่อมต่อ
 6. Build และ upload โปรแกรมลงบอร์ด 
