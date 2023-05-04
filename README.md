@@ -110,7 +110,7 @@ Figure: Output
 
 1. เริ่มใช้งาน  node-red → [ติดตั้ง Node-red บน Windows](https://github.com/Advance-Innovation-Centre-AIC/EE_Curriculum/blob/main/term2_65_EMB62_IoT/LAB01/Get_started_Node-red.md#%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-node-red-%E0%B8%9A%E0%B8%99-windows)
 2. import code Button control LED PSoC6
-a. คลิ๊กที่ ไฟล์ source >>\[Button control LED PSoC6.json\]( )
+a. คลิ๊กที่ ไฟล์ source >>\[Button control LED PSoC6.json\](https://github.com/Advance-Innovation-Centre-AIC/LAB_NodeRed_Read_sensor_psoc6_via_mqtt/blob/367eff3d4db6d1fa1ef356fc44aca44c0235c3a7/flow/NodeRed_Read_sensor_psoc6_via_mqtt.json)
 
 b.copy code ไปที่ แถบขวามือ>>คลิ๊กที่แถบ ขีดสามขีด>> เลือก import
 
