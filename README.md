@@ -204,6 +204,6 @@ Figure: Node-red dashboard
 
 ---------------------
 Date: 10 May 2023
- * Author: Soontree jaikhong (AIC-Researcher) 
+ *Author: Soontree jaikhong (AIC-Researcher) 
 
 
