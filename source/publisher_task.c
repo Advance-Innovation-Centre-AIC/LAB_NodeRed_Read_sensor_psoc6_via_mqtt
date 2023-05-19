@@ -190,7 +190,7 @@ void publisher_task(void *pvParameters)
  1. ทำหน้าที่อ่านค่า temperature,pressure sensor
  2. ตั้งค่า เป็น Publisher ส่งข้อมูล sensor ไปยัง MQTT topic name: PSoC6Status/temperature,pressure
 
-
+Credit Author : Soontree Jaikhong (AIC-Reseacher) -2023
 
  *******************************************************************************************/
 		/* get function for Initialize pressure sensor */
